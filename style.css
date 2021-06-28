@@ -21,6 +21,51 @@ b,
 i {
   font-family: "Nunito", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.appHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #fff;
+  z-index: 10;
+  height: 60px;
+  position: sticky;
+  top: 0;
+}
+
+.appHeader ul {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  height: 100%;
+}
+
+.appHeader ul li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  color: #333;
+}
+
+.appHeader ul li:hover {
+  background-color: #f2f2f2;
+}
+
+.active-nav-link {
+  font-weight: bold;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
 .thin {
   font-weight: 200;
 }
@@ -40,10 +85,12 @@ i {
   font-size: 1.2rem;
 }
 .container-fluid {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.container {
+  margin: 4rem 0;
 }
 .ss {
   width: 100%;
@@ -68,4 +115,13 @@ i {
 .my-card a {
   text-decoration: none;
   color: #000;
+}
+
+@media screen and (min-width: 600px) {
+  .container-fluid {
+    height: 100vh;
+  }
+  .container {
+    margin: 0;
+  }
 }
