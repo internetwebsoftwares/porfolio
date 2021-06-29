@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* --primary-color: "#";
+  --secondary-color: "#";
+  --accent-color: "#"; */
+  --dark-color: "#1F2937";
+}
+
 h1,
 h2,
 h3,
@@ -115,6 +122,13 @@ a:hover {
 .my-card a {
   text-decoration: none;
   color: #000;
+}
+
+.technologies i {
+  font-size: 1.4rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  position: relative;
 }
 
 @media screen and (min-width: 600px) {
