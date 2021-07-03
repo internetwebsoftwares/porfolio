@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+:root {
+  --primary: #2563eb;
+  --secondary: #3b82f6;
+  --light: #f3f4f6;
+  --dark: #1f2937;
+}
 
 *,
 *::after,
@@ -8,134 +14,254 @@
   box-sizing: border-box;
 }
 
-:root {
-  /* --primary-color: "#";
-  --secondary-color: "#";
-  --accent-color: "#"; */
-  --dark-color: "#1F2937";
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-div,
-b,
-i {
-  font-family: "Nunito", sans-serif;
-}
-
 html {
+  font-family: "Nunito", sans-serif;
   scroll-behavior: smooth;
 }
 
 .appHeader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #e6e6e6;
-  background-color: #fff;
-  z-index: 10;
-  height: 60px;
+  padding: 1rem;
   position: sticky;
   top: 0;
+  height: 70px;
+  z-index: 3;
+  background-color: var(--light);
 }
 
-.appHeader ul {
-  margin: 0;
-  list-style-type: none;
+.appHeaderContainer {
   display: flex;
-  height: 100%;
-}
-
-.appHeader ul li {
-  height: 100%;
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
-  color: #333;
 }
 
-.appHeader ul li:hover {
-  background-color: #f2f2f2;
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
-.active-nav-link {
+.appHeader a {
+  color: var(--dark);
+}
+.appHeader span {
+  color: var(--dark);
+  font-size: 1.4rem;
+}
+
+.appHeader i {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.appNav a {
+  color: var(--light);
+}
+
+.actionBtn {
+  background-color: var(--dark);
+  color: var(--light);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.actionBtn-primary {
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.actionBtn:hover,
+.actionBtn-primary:hover {
+  opacity: 0.9;
+}
+
+.desktopNav {
+  display: none;
+}
+
+.desktopNav a {
+  margin-right: 0.5rem;
+}
+
+.activeNavLink {
+  color: var(--dark);
   font-weight: bold;
 }
 
-a,
-a:hover {
-  text-decoration: none;
+.appNav {
+  width: 100%;
+  background-color: var(--dark);
+  color: var(--light);
+  position: fixed;
+  z-index: 2;
+  transition: 0.4s ease;
+  opacity: 0;
 }
 
-.thin {
-  font-weight: 200;
-}
-.regular {
-  font-weight: 400;
-}
-.bold {
-  font-weight: 700;
+.appNav ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
-.profile {
-  border-radius: 50%;
-  width: 220px;
-  height: 220px;
+.appNav ul li:hover {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
 }
-.contacts i {
-  font-size: 1.2rem;
+section {
+  padding: 5rem 1rem;
 }
-.container-fluid {
+
+#home {
+  background-color: var(--light);
+}
+
+#home .homeContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-.container {
-  margin: 4rem 0;
-}
-.ss {
-  width: 100%;
-  height: 150px;
-  margin-bottom: 8px;
-  border: 1px solid #ccc;
+  justify-content: center;
 }
 
-.max-500 {
-  width: 100%;
-  max-width: 500px;
+#home .homeContainer .col {
+  text-align: center;
 }
 
-.my-card {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 1rem;
+#home .h1 {
+  font-size: 1.7rem;
+}
+
+.appHeader #closeNavBtn {
+  display: none;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.socialIcons {
+  font-size: 1rem;
+}
+
+.socialIcons a {
+  color: var(--dark);
+  margin-right: 0.5rem;
+}
+
+.socialIcons a:hover {
+  opacity: 0.8;
+}
+
+.projectCard {
+  margin-bottom: 3rem;
+  background-color: var(--light);
+  padding-bottom: 0.5rem;
   border-radius: 5px;
-  cursor: pointer;
-  margin: 0.5rem;
 }
 
-.my-card a {
-  text-decoration: none;
-  color: #000;
+.projectCard img {
+  width: 100%;
+  max-width: 400px;
 }
 
-.technologies i {
-  font-size: 1.4rem;
-  margin: 0.5rem;
-  cursor: pointer;
-  position: relative;
+.projectCard .inner {
+  padding: 1rem;
 }
 
-@media screen and (min-width: 600px) {
-  .container-fluid {
-    height: 100vh;
+.projectCard .chip {
+  background-color: var(--dark);
+  color: var(--light);
+  margin-right: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
+#skills {
+  background-color: var(--light);
+}
+.skillsContainer progress {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+#contact {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.form-group {
+  margin: 1rem 0;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+footer {
+  background-color: #18212e;
+  color: var(--light);
+  padding: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+  #openNavBtn,
+  #closeNavBtn {
+    display: none;
   }
-  .container {
-    margin: 0;
+  .desktopNav {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  section {
+    display: flex;
+    align-items: center;
+  }
+  #home .homeContainer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #home .homeContainer .col {
+    text-align: left;
+  }
+
+  #home .homeContainer .imageCol {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #home .homeContainer .infoCol {
+    padding-right: 4rem;
+  }
+  .profile-pic {
+    margin-bottom: 0;
+  }
+  .projectCard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem;
   }
 }

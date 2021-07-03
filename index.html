@@ -5,12 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ata Shaikh | Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="text.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -18,146 +14,222 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="appHeader">
-      <ul id="appNavigation">
-        <a class="active-nav-link" href="#portfolio">
+      <div class="container appHeaderContainer">
+        <span
+          ><a href="#home"><strong>Ata</strong> Shaikh</a></span
+        >
+        <span>
+          <i id="openNavBtn" onclick="openNav()" class="fas fa-bars"></i>
+          <i id="closeNavBtn" onclick="closeNav()" class="fas fa-times"></i>
+        </span>
+        <nav class="desktopNav">
+          <a class="activeNavLink" href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <nav class="appNav">
+      <ul>
+        <a href="#home">
           <li>Home</li>
         </a>
-        <a href="#works">
+        <a href="#projects">
           <li>Projects</li>
         </a>
+        <a href="#skills">
+          <li>Skills</li>
+        </a>
         <a href="#contact">
-          <li>Contact me</li>
+          <li>Contact</li>
         </a>
       </ul>
-    </header>
-    <section id="portfolio" class="container-fluid">
-      <div
-        class="
-          container
-          d-flex
-          flex-column
-          justify-content-center
-          align-items-center
-          text-center
-          mt-5
-        "
-      >
-        <img src="images/profile.jpg" alt="profile" class="profile mb-4" />
-        <h1 class="regular mt-4">Hi, I am <b>Ata Shaikh</b>.</h1>
-        <h3 class="text-muted">
-          A professional full stack web developer and software engineer.
-        </h3>
-        <div
-          class="
-            contacts
-            my-4
-            d-flex
-            flex-column
-            justify-content-center
-            align-items-center
-          "
-        >
-          <i class="text-dark fas fa-envelope">
-            <span>atashaikh666@gmail.com</span>
-          </i>
-          <a class="mt-3" href="https://www.instagram.com/shaikhata666">
-            <i class="fab fa-twitter"> <span>Twitter</span></i></a
-          >
+    </nav>
+    <!-- Section Home -->
+    <section id="home">
+      <div class="container homeContainer">
+        <div class="col imageCol">
+          <img src="images/profile.jpg" class="profile-pic" />
         </div>
-        <h3 class="mt-5">Technologies i know:</h3>
-        <div class="technologies my-3">
-          <i title="HTML5" class="fab fa-html5"></i>
-          <i title="CSS3" class="fab fa-css3-alt"></i>
-          <i title="React js" class="fab fa-react"></i>
-          <i title="Node js" class="fab fa-node"></i>
-          <i title="Mongo db" class="fas fa-database"></i>
-        </div>
-      </div>
-    </section>
-    <!-- My Works -->
-    <section id="works" class="bg-light border-top container-fluid mt-5 p-4">
-      <div class="container">
-        <h2 class="text-center"><strong>My Works</strong></h2>
-        <br />
-        <div class="row d-flex justify-content-center">
-          <div class="my-card border col-sm-12 mb-3 col-md-5 col-lg-3">
-            <a href="https://blogbookapp.netlify.app/">
-              <img class="ss" src="images/blogbook-ss.png" alt="blogbook-ss" />
-
-              <h5 class="my-3"><strong>Blogbook</strong></h5>
-              <strong class="text-muted"
-                >A blog writing social media web application</strong
-              >
-            </a>
-          </div>
-          <div class="my-card border col-sm-12 mb-3 col-md-5 col-lg-3">
-            <a href="https://forms-iws.netlify.app/">
-              <img class="ss" src="images/forms-ss.png" alt="forms-ss" />
-
-              <h5 class="my-3"><strong>Forms</strong></h5>
-              <strong class="text-muted"
-                >A next generation plartform to create forms</strong
-              >
-            </a>
-          </div>
-          <div class="my-card border col-sm-12 mb-3 col-md-5 col-lg-3">
-            <a href="https://internetwebsoftwares.github.io/covid-19-app/">
-              <img class="ss" src="images/covid-19-ss.png" alt="covid-19-ss" />
-
-              <h5 class="my-3"><strong>Covid-19</strong></h5>
-              <strong class="text-muted"
-                >A site that will provide you latest updates on covid-19</strong
-              >
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- My Works -->
-    <!-- Contact  -->
-    <section id="contact" class="bg-dark text-white container-fluid p-4">
-      <div class="container d-flex justify-content-center">
-        <div class="max-500">
-          <h2 class="text-center"><strong>Contact me</strong></h2>
-
+        <div class="col infoCol">
+          <span class="h1">Hi, I am <strong>Ata Shaikh</strong> </span>
+          <h4 class="text-secondary">
+            A full stack web developer, and software engineer
+          </h4>
           <br />
+          <p style="max-width: 700px" class="text-muted">
+            I am a passionate software developer. I enjoy working with various
+            technologies and languages such as Javascript, React, NodeJs.
+          </p>
+          <br />
+          <div class="socialIcons">
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
 
-          <div class="align-self-end form-group">
-            <label>Your email address:</label>
-            <input
-              placeholder="example@domain.com"
-              type="text"
-              class="form-control"
-            />
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
           </div>
-
-          <a
-            href="mailto:atashaikh666@gmail.com"
-            class="btn-block btn btn-primary"
-          >
-            Submit
-            <i class="fas fa-paper-plane ml-2"></i>
-          </a>
+          <br />
+          <a href="#projects" class="actionBtn"><strong>My projects</strong></a>
         </div>
       </div>
     </section>
-    <!-- Contact  -->
-    <script>
-      const appNavigation = document.getElementById("appNavigation");
-      [...appNavigation.children].forEach((link) =>
-        link.addEventListener("click", activateLink)
-      );
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container projectsContainer">
+        <h2>Projects</h2>
+        <br />
+        <div class="projectCard">
+          <img src="images/blogbook-ss.png" />
+          <div class="inner">
+            <h3>Blogbook app</h3>
 
-      function activateLink(e) {
-        [...appNavigation.children].forEach((link) => {
-          link.classList.remove("active-nav-link");
-        });
-        e.target.parentElement.classList.add("active-nav-link");
-      }
-    </script>
+            <p class="text-muted">
+              A social media web application to create and read blogs
+            </p>
+            <a href="https://blogbookapp.netlify.app/"
+              >https://blogbookapp.netlify.app</a
+            >
+            <div>
+              <br />
+              <small class="chip"><strong> Mongo DB </strong></small>
+              <small class="chip"><strong> Express JS </strong></small>
+              <small class="chip">
+                <strong>React JS</strong>
+              </small>
+              <small class="chip">
+                <strong>Node JS</strong>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="projectCard">
+          <img src="images/forms-ss.png" />
+          <div class="inner">
+            <h3>Forms app</h3>
+
+            <p class="text-muted">
+              A next generation web application to create form for quizes, exams
+              and all other activities
+            </p>
+            <a href="https://forms-iws.netlify.app/"
+              >https://forms-iws.netlify.app</a
+            >
+            <br />
+
+            <div>
+              <br />
+              <small class="chip"><strong> Mongo DB </strong></small>
+              <small class="chip"><strong> Express JS </strong></small>
+              <small class="chip">
+                <strong>React JS</strong>
+              </small>
+              <small class="chip">
+                <strong>Node JS</strong>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="projectCard">
+          <img src="images/covid-19-ss.png" />
+          <div class="inner">
+            <h3>Covid-19 app</h3>
+
+            <p class="text-muted">
+              An application that gives you latest information of covid-19
+              around the world
+            </p>
+            <a href="https://internetwebsoftwares.github.io/covid-19-app/">
+              https://internetwebsoftwares.gi...
+            </a>
+            <br />
+            <div>
+              <br />
+              <small class="chip">
+                <strong>HTML5</strong>
+              </small>
+              <small class="chip">
+                <strong>CSS3</strong>
+              </small>
+              <small class="chip"><strong> Javascript </strong></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container skillsContainer">
+        <h2>Skills</h2>
+        <br />
+        <div>
+          HTML5
+          <progress value="75" max="100"></progress>
+        </div>
+        <div>
+          CSS3
+          <progress value="70" max="100"></progress>
+        </div>
+        <div>
+          Javascript
+          <progress value="65" max="100"></progress>
+        </div>
+        <div>
+          React JS
+          <progress value="65" max="100"></progress>
+        </div>
+        <div>
+          Node JS
+          <progress value="65" max="100"></progress>
+        </div>
+        <div>
+          Mongo DB
+          <progress value="80" max="100"></progress>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container contactContainer">
+        <h2>Contact</h2>
+        <br />
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input
+            type="email"
+            class="form-control"
+            required
+            placeholder="example@domain.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Subject:</label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            placeholder="Subject"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Message:</label>
+          <textarea name="" id="" rows="5" class="form-control"></textarea>
+        </div>
+        <br />
+        <div class="form-group">
+          <a class="actionBtn-primary" href="mailto:atashaikh666@gmail.com"
+            >Submit</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer>&copy; All rights reserved</footer>
   </body>
+  <script src="app.js"></script>
 </html>
