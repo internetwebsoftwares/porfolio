@@ -327,6 +327,10 @@ footer {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     padding: 1.5rem;
+  }
+  .projectCard img {
+    margin-bottom: 1rem;
   }
 }
