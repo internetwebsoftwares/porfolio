@@ -224,7 +224,7 @@ textarea {
   display: inline-block;
   color: var(--light);
   margin-right: 0.5rem;
-  padding: 0.2rem;
+  padding: 0.25rem 0.4rem;
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
