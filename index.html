@@ -96,7 +96,7 @@
             <h3>Blogbook app</h3>
 
             <p class="text-muted">
-              A social media web application to create and read blogs
+              A social media web application to create and read blogs.
             </p>
             <a href="https://blogbookapp.netlify.app/"
               >https://blogbookapp.netlify.app</a
@@ -122,8 +122,8 @@
             <h3>Webmail app</h3>
 
             <p class="text-muted">
-              An email sending and receiving service. an alternative to email
-              but easy to use
+              An email sending and receiving service. an alternative to gmail
+              but easy to use.
             </p>
             <a href="https://web-mail.netlify.app/"
               >https://web-mail.netlify.app</a
@@ -150,7 +150,7 @@
 
             <p class="text-muted">
               A next generation web application to create form for quizes, exams
-              and all other activities
+              and all other activities.
             </p>
             <a href="https://forms-iws.netlify.app/"
               >https://forms-iws.netlify.app</a
@@ -179,7 +179,7 @@
 
             <p class="text-muted">
               An application that gives you latest information of covid-19
-              around the world
+              around the world.
             </p>
             <a href="https://internetwebsoftwares.github.io/covid-19-app/">
               https://internetwebsoftwares.gi...
@@ -254,7 +254,7 @@
             <label for="email">Enter your message:</label>
             <textarea
               name="message"
-              placeholder="Hey, i like your portfolio...."
+              placeholder="Hey Ata Shaikh, i like your portfolio...."
               id=""
               rows="5"
               class="form-control"
@@ -271,7 +271,15 @@
         </form>
       </div>
     </section>
-    <footer>&copy; All rights reserved</footer>
+    <footer>
+      &copy;
+      <span id="currentYear"></span>
+      All rights reserved
+    </footer>
+    <script>
+      document.querySelector("#currentYear").innerText =
+        new Date().getFullYear();
+    </script>
+    <script src="app.js"></script>
   </body>
-  <script src="app.js"></script>
 </html>
