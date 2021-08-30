@@ -314,6 +314,9 @@ footer {
     align-items: center;
     padding: 1.5rem;
   }
+  .projectCard img {
+    min-width: 400px;
+  }
 }
 
 @media screen and (max-width: 850px) {
