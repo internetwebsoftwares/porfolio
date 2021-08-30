@@ -11,12 +11,7 @@
     #f2f2f2,
     #f2f2f2
   );
-  --dark-gradient: linear-gradient(
-    to right bottom,
-    var(--dark),
-    #333,
-    var(--dark)
-  );
+  --dark-gradient: linear-gradient(to right bottom, var(--dark), #374151);
 }
 
 *,
