@@ -331,4 +331,10 @@ footer {
   .projectCard img {
     margin-bottom: 1rem;
   }
+  .profile-pic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 12px 35px rgba(0, 0, 0, 0.2);
+  }
 }
